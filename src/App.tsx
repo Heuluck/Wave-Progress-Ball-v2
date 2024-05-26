@@ -1,11 +1,11 @@
 import './App.css'
-import Ball from './components/ball/ball'
+import WaveBall from './components/ball/ball'
 
 function App() {
 
   return (
     <>
-      <Ball value={50} />
+      <WaveBall value={50} />
     </>
   )
 }
