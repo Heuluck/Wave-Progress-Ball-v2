@@ -1,9 +1,9 @@
 .wave{
-    animation:move var(--time) linear infinite;
+    animation:var(--animeType,move) var(--time,3) linear infinite;
 }
 
 #waveDef{
-    transform: translateY(var(--offsetY));
+    transform: translateY(var(--offsetY,50));
     transition: all 1s ease-in-out;
 }
 
@@ -13,5 +13,14 @@
     }
     to{
         transform: translate(700px);
+    }
+}
+
+@keyframes move-reverse{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-700px);
     }
 }
