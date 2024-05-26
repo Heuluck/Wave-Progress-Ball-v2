@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <Ball />
+      <Ball value={50} />
     </>
   )
 }

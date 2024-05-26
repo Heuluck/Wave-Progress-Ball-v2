@@ -1,12 +1,17 @@
 .wave{
-    animation:move 3s linear infinite;
+    animation:move var(--time) linear infinite;
+}
+
+#waveDef{
+    transform: translateY(var(--offsetY));
+    transition: all 1s ease-in-out;
 }
 
 @keyframes move{
     from{
-        transform: translate(0 , 0%);
+        transform: translate(0);
     }
     to{
-        transform: translate(700px , 0%);
+        transform: translate(700px);
     }
 }
