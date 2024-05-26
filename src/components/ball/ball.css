@@ -1,0 +1,12 @@
+.wave{
+    animation:move 3s linear infinite;
+}
+
+@keyframes move{
+    from{
+        transform: translate(0 , 0%);
+    }
+    to{
+        transform: translate(700px , 0%);
+    }
+}
