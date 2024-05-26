@@ -1,6 +1,9 @@
-interface BallProps {
+interface BallProps extends BallSetting {
     /** 进度 */
     value: number;
+}
+
+interface BallSetting {
     /** 圆环的颜色 */
     circleColor?: string;
     /** 圆环线条的宽度 */

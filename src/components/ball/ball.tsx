@@ -35,20 +35,18 @@ export default function WaveBall(props: BallProps) {
                     strokeWidth={circleLineWidth}
                 />
                 <g clipPath="url(#cutCircle)">
-                    {showWaveBg && (
-                        <use
-                            className="wave wave-2"
-                            xlinkHref="#waveDef"
-                            fill={isWaveBgGradient ? "url(#Gradient-2)" : waveBgColor}
-                            x={waveBgOffsetX * 175}
-                            y={waveBgOffsetY}
-                            style={
-                                {
-                                    "--time": `${waveBgSpeed}s`,
-                                    "--animeType": reverseWaveBg ? "move-reverse" : "move",
-                                } as CSSProperties
-                            }></use>
-                    )}
+                    <use
+                        className="wave wave-2"
+                        xlinkHref="#waveDef"
+                        fill={showWaveBg?(isWaveBgGradient ? "url(#Gradient-2)" : waveBgColor):"transparent"}
+                        x={waveBgOffsetX * 175}
+                        y={waveBgOffsetY}
+                        style={
+                            {
+                                "--time": `${waveBgSpeed}s`,
+                                "--animeType": reverseWaveBg ? "move-reverse" : "move",
+                            } as CSSProperties
+                        }></use>
                     <use
                         className="wave wave-1"
                         xlinkHref="#waveDef"
@@ -78,7 +76,7 @@ export default function WaveBall(props: BallProps) {
                         style={{ "--offsetY": `${350 * ((100 - value) / 100)}px` } as CSSProperties}
                     />
                     <clipPath id="cutCircle">
-                        <circle cx="175" cy="175" r="170" />
+                        <circle cx="175" cy="175" r={170 - circleLineWidth / 2} />
                     </clipPath>
                     <linearGradient id="Gradient-1" x1="0" x2="1" y1="0" y2="0">
                         <stop offset="0%" stopColor={waveGradientColor.start} />
