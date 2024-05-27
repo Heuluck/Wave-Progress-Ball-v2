@@ -1,6 +1,6 @@
 {
     "name": "react-wave-progress-ball-svg",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/react-wave-progress-ball-svg.umd.js",
     "module": "dist/react-wave-progress-ball-svg.mjs",
     "typings": "dist/index.d.ts",
