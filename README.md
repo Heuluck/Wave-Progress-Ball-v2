@@ -6,11 +6,11 @@
 
 ## 预览 Preview
 
-Demo：[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-v2/)
+Demo：[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)
 
 ## 上一版本 Old Version
 
-[前版本 Wave-Progress-Ball](https://github.com/Heuluck/Wave-Progress-Ball)使用`<canvas>`实现，在性能和图形上存在一定的劣势，然而渐变效果不知为何更加平滑，Demo：[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball/)。
+[前版本 Wave-Progress-Ball](https://github.com/Heuluck/Wave-Progress-Ball)使用`<canvas>`实现，在性能和图形上存在一定的劣势，然而渐变效果不知为何更加平滑，Demo：[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)。
 
 ## 安装 Manual Install
 
@@ -33,7 +33,7 @@ return <WaveBall value={value} />;
 
 #### 快速生成 Setting Generator
 
-在[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-v2/)或本地部署本仓库，在页面中配置好参数，在“导出设置”选项卡点击复制按钮即可。
+在[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)或本地部署本仓库，在页面中配置好参数，在“导出设置”选项卡点击复制按钮即可。
 
 #### 示例 Example
 

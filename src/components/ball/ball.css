@@ -2,11 +2,6 @@
     animation:var(--animeType,move) var(--time,3) linear infinite;
 }
 
-#waveDef{
-    transform: translateY(var(--offsetY,50));
-    transition: all 1s ease-in-out;
-}
-
 @keyframes move{
     from{
         transform: translate(0);
