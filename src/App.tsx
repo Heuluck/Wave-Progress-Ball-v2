@@ -252,7 +252,7 @@ function App() {
                                     unCheckedChildren="单色"
                                 />
                             </Form.Item>
-                            {isWaveGradient ? (
+                            {isWaveBgGradient ? (
                                 <>
                                     <Form.Item label="开始颜色">
                                         <ColorPicker
