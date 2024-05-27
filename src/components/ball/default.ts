@@ -1,4 +1,7 @@
 export const defaultSetting = {
+    size: 350,
+    width: 350,
+    height: 350,
     circleColor: "#bdc3c7",
     circleLineWidth: 1,
     waveHeight: 30,

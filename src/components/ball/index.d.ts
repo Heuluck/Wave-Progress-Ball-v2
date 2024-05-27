@@ -4,6 +4,8 @@ interface BallProps extends BallSetting {
 }
 
 interface BallSetting {
+    /** 圆环的半径 */
+    size?: number;
     /** 圆环的颜色 */
     circleColor?: string;
     /** 圆环线条的宽度 */

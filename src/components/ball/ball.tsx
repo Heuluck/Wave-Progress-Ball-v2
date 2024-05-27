@@ -5,6 +5,7 @@ import "./ball.css";
 export default function WaveBall(props: BallProps) {
     const {
         value,
+        size = defaultSetting.size,
         circleColor = defaultSetting.circleColor,
         circleLineWidth = defaultSetting.circleLineWidth,
         waveHeight = defaultSetting.waveHeight,
@@ -25,7 +26,7 @@ export default function WaveBall(props: BallProps) {
     } = props;
     return (
         <>
-            <svg width={350} height={350} xmlns="http://www.w3.org/2000/svg">
+            <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350">
                 <circle
                     cx="175"
                     cy="175"

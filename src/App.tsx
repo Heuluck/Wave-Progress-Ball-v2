@@ -7,6 +7,7 @@ import { QuestionCircleOutlined } from "@ant-design/icons";
 
 function App() {
     const [value, setValue] = useState<number>(50);
+    const [size, setSize] = useState<number>(350);
     const [circleColor, setCircleColor] = useState<string>("#bdc3c7");
     const [circleLineWidth, setCircleLineWidth] = useState<number>(1);
     const [waveHeight, setWaveHeight] = useState<number>(30);
@@ -31,6 +32,7 @@ function App() {
     const [reverseWave, setReverseWave] = useState<boolean>(false);
     const [reverseWaveBg, setReverseWaveBg] = useState<boolean>(false);
     const setting = {
+        size,
         circleColor,
         circleLineWidth,
         waveHeight,
@@ -58,6 +60,9 @@ function App() {
                 <>
                     <Form.Item label="液面高度">
                         <Slider key="height" defaultValue={value} onChange={setValue} min={0} max={100} step={1} />
+                    </Form.Item>
+                    <Form.Item label="球的大小">
+                        <Slider key="size" defaultValue={size} onChange={setSize} min={10} max={1000} step={1} />
                     </Form.Item>
                 </>
             ),

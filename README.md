@@ -2,7 +2,7 @@
 
 ![Deploy Status](https://github.com/Heuluck/Wave-Progress-Ball-v2/actions/workflows/node.js.yml/badge.svg)
 
-这是一个基于 React，使用`<svg>`实现的波浪进度球组件。进度球可以自定义颜色、大小、进度等。自定义内容详见[自定义](#参数-props)。
+这是一个基于 React，使用`<svg>`实现的波浪进度球组件。进度球可以自定义颜色、大小、进度、渐变、速度等一系列参数。自定义内容详见[自定义](#参数-props)。
 
 ## 上一版本 Old Version
 
@@ -41,6 +41,7 @@ return <WaveBall value={value} />;
 export function ExampleBall() {
     const [value, setValue] = useState(50);
     const settings = {
+        size: 350,
         circleColor: "#bdc3c7",
         circleLineWidth: 1,
         waveHeight: 30,
@@ -78,6 +79,7 @@ export function ExampleBall() {
 | 参数                | 说明                           | 类型                            | 默认值                                                           | 必填  |
 | ------------------- | ------------------------------ | ------------------------------- | ---------------------------------------------------------------- | ----- |
 | value               | 进度                           | number                          | "-"                                                              | true  |
+| size                | 球的大小                       | number                          | 350                                                              | false |
 | circleColor         | 圆环的颜色                     | string                          | "#bdc3c7"                                                        | false |
 | circleLineWidth     | 圆环线条的宽度                 | number                          | 1                                                                | false |
 | waveHeight          | 波浪的高度                     | number                          | 30                                                               | false |
