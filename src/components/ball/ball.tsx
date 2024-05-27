@@ -1,6 +1,6 @@
 import { defaultSetting } from "./default";
-import styled, { keyframes } from "styled-components";
-import "./ball.css";
+import style from "./ball.module.css";
+import { CSSProperties } from "react";
 
 export interface BallProps extends BallSetting {
     /** 进度 */
@@ -128,32 +128,6 @@ export default function WaveBall(props: BallProps) {
         reverseWaveBg = defaultSetting.reverseWaveBg,
     } = props;
 
-    const move = keyframes`
-    from{
-        transform: translate(0);
-    }
-    to{
-        transform: translate(700px);
-    }`;
-
-    const moveReverse = keyframes`
-    from{
-        transform: translate(0);
-    }
-    to{
-        transform: translate(-700px);
-    }`;
-
-    const WavePath = styled.path`
-        transform: translateY(${350 * ((100 - value) / 100)}px);
-        transition: all 1s ease-in-out;
-    `;
-    const WaveBg = styled.use`
-        animation: ${reverseWaveBg ? moveReverse : move} ${waveBgSpeed}s linear infinite;
-    `;
-    const Wave = styled.use`
-        animation: ${reverseWave ? moveReverse : move} ${waveSpeed}s linear infinite;
-    `;
     return (
         <>
             <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350">
@@ -166,20 +140,34 @@ export default function WaveBall(props: BallProps) {
                     strokeWidth={circleLineWidth}
                 />
                 <g clipPath="url(#cutCircle)">
-                    <WaveBg
+                    <use
+                        className={style.wave}
                         xlinkHref="#waveDef"
                         fill={showWaveBg ? (isWaveBgGradient ? "url(#Gradient-2)" : waveBgColor) : "transparent"}
                         x={waveBgOffsetX * 175}
-                        y={waveBgOffsetY}></WaveBg>
-                    <Wave
+                        y={waveBgOffsetY}
+                        style={
+                            {
+                                "--time": `${waveBgSpeed}s`,
+                                "--animeType": reverseWaveBg ? style["move-reverse"] : style["move"],
+                            } as CSSProperties
+                        }></use>
+                    <use
+                        className={style.wave}
                         xlinkHref="#waveDef"
                         fill={isWaveGradient ? "url(#Gradient-1)" : waveColor}
                         x="0"
-                        y={waveOffsetY}></Wave>
+                        y={waveOffsetY}
+                        style={
+                            {
+                                "--time": `${waveSpeed}s`,
+                                "--animeType": reverseWave ? style["move-reverse"] : style["move"],
+                            } as CSSProperties
+                        }></use>
                 </g>
                 <defs>
                     {/* 先画半个曲线，然后自动画出另一半，以此类推，然后画出下面并自动闭合填充 */}
-                    <WavePath
+                    <path
                         d={`M -875 0 Q -787.5 ${waveHeight}, -700 0 T -525 0
                         T -350 0 T -175 0
                         T 0 0 T 175 0
@@ -189,7 +177,9 @@ export default function WaveBall(props: BallProps) {
                         T 1400 0 T 1575 0
                         T 1750 0 T 1925 0
                         L 1750 350 L -875 350 Z`}
+                        className={style.waveDef}
                         id="waveDef"
+                        style={{ "--offsetY": `${350 * ((100 - value) / 100)}px` } as CSSProperties}
                     />
                     <clipPath id="cutCircle">
                         <circle cx="175" cy="175" r={170 - circleLineWidth / 2} />

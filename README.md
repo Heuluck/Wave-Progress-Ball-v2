@@ -14,11 +14,13 @@ Demo：[Github Pages 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)
 
 ## 安装 Manual Install
 
-暂时没有发布 npm 包，所以需要手动安装。
+执行`npm i react-wave-progress-ball-svg`或`yarn add react-wave-progress-ball-svg`后，即可在项目中使用。
 
-需要 npm、React 以及 TypeScript 环境。
-
-`git clone`到本地后，复制`src/components/ball`文件夹到自己的项目的`components`中。
+然后在需要处引入即可(注意需要手动引入样式)：
+```
+import WaveBall from "react-wave-progress-ball-svg";
+import "react-wave-progress-ball-svg/dist/style.css";
+```
 
 ## 使用 Usage
 
