@@ -1,37 +1,39 @@
 # 波浪进度球 Wave Progress Ball for React
+<div align="center">
+
+![NPM Version](https://img.shields.io/npm/v/react-wave-progress-ball-svg?style=flat-square) ![NPM Downloads](https://img.shields.io/npm/dm/react-wave-progress-ball-svg?style=flat-square) ![NPM Type Definitions](https://img.shields.io/npm/types/react-wave-progress-ball-svg?style=flat-square)
+ ![NPM License](https://img.shields.io/npm/l/react-wave-progress-ball-svg?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-wave-progress-ball-svg?style=flat-square) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+中文 · [English](./README-EN.md)
+
+</div>
 
 这是一个基于 React，使用`<svg>`实现的波浪进度球组件。进度球可以自定义颜色、大小、进度、渐变、速度等一系列参数。自定义内容详见[自定义](#参数-props)。
 
-## 预览 Preview
+## 预览
 
 [波浪进度球 Demo](https://heuluck.github.io/Wave-Progress-Ball-Demo/)
 
-## 上一版本 Old Version
-
-[老版本波浪进度球](https://github.com/Heuluck/Wave-Progress-Ball)使用`<canvas>`实现，在性能和图形上存在一定的劣势，然而渐变效果不知为何更加平滑，请见[老版本 Demo](https://heuluck.github.io/Wave-Progress-Ball/)。
-
-## 安装 Install
+## 安装
 
 使用`npm`或`yarn`等包管理器安装后，即可在项目中使用。
 
 ```bash
-npm i react-wave-progress-ball-svg
-
+$ npm i react-wave-progress-ball-svg
 ```
 
 ```bash
-yarn add react-wave-progress-ball-svg
-
+$ yarn add react-wave-progress-ball-svg
 ```
 
-然后在需要处引入即可(注意需要手动引入样式)：
+然后在需要处引入即可 (注意需要手动引入样式)：
 
 ```jsx
 import WaveBall from "react-wave-progress-ball-svg";
 import "react-wave-progress-ball-svg/dist/style.css";
 ```
 
-## 使用 Usage
+## 使用
 
 ### 基本用法
 
@@ -42,17 +44,21 @@ return <WaveBall value={value} />;
 
 ### 自定义
 
-#### 快速生成 Setting Generator
+#### 快速生成
 
 只需要在[波浪进度球 Demo 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)中配置好参数，在“导出设置”选项卡点击复制按钮即可。
 
-#### 示例 Example
+#### 示例
 
 ```jsx
+import WaveBall from "react-wave-progress-ball-svg";
+import "react-wave-progress-ball-svg/dist/style.css";
+
 export function ExampleBall() {
     const [value, setValue] = useState(50);
     const settings = {
         size: 350,
+        adaptive: false,
         circleColor: "#bdc3c7",
         circleLineWidth: 1,
         waveHeight: 30,
