@@ -117,3 +117,5 @@ export function ExampleBall() {
 | showWaveBg          | 是否显示背景波浪               | boolean                         | true                                                             | false |
 | reverseWave         | 是否反转波浪                   | boolean                         | false                                                            | false |
 | reverseWaveBg       | 是否反转背景波浪               | boolean                         | false                                                            | false |
+## 更新日志
+[更新日志](./CHANGELOG.md)

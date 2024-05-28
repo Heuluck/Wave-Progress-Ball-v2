@@ -44,7 +44,9 @@ export default function WaveBall(props: BallProps) {
                     stroke={circleColor}
                     strokeWidth={circleLineWidth}
                 />
-                <g clipPath="url(#cutCircle)">
+                <g
+                    clipPath="url(#cutCircle)"
+                    style={{ "--offsetY": `${350 * ((100 - value) / 100)}px` } as CSSProperties}>
                     <use
                         className={styleModule.wave}
                         xlinkHref="#waveDef"
@@ -84,7 +86,6 @@ export default function WaveBall(props: BallProps) {
                         L 1750 350 L -875 350 Z`}
                         className={styleModule.waveDef}
                         id="waveDef"
-                        style={{ "--offsetY": `${350 * ((100 - value) / 100)}px` } as CSSProperties}
                     />
                     <clipPath id="cutCircle">
                         <circle cx="175" cy="175" r={170 - circleLineWidth / 2} />

@@ -117,3 +117,5 @@ export function ExampleBall() {
 | showWaveBg          | Whether to show the background wave                  | boolean                         | true                                                             | false |
 | reverseWave         | Whether to reverse the wave                          | boolean                         | false                                                            | false |
 | reverseWaveBg       | Whether to reverse the background wave               | boolean                         | false                                                            | false |
+## Changelog
+[Changelog (Chinese)](./CHANGELOG.md)
