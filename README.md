@@ -4,19 +4,21 @@
 
 ## 预览 Preview
 
-[波浪进度球Demo](https://heuluck.github.io/Wave-Progress-Ball-Demo/)
+[波浪进度球 Demo](https://heuluck.github.io/Wave-Progress-Ball-Demo/)
 
 ## 上一版本 Old Version
 
-[老版本波浪进度球](https://github.com/Heuluck/Wave-Progress-Ball)使用`<canvas>`实现，在性能和图形上存在一定的劣势，然而渐变效果不知为何更加平滑，请见[老版本Demo](https://heuluck.github.io/Wave-Progress-Ball/)。
+[老版本波浪进度球](https://github.com/Heuluck/Wave-Progress-Ball)使用`<canvas>`实现，在性能和图形上存在一定的劣势，然而渐变效果不知为何更加平滑，请见[老版本 Demo](https://heuluck.github.io/Wave-Progress-Ball/)。
 
 ## 安装 Install
 
 使用`npm`或`yarn`等包管理器安装后，即可在项目中使用。
+
 ```bash
 npm i react-wave-progress-ball-svg
 
 ```
+
 ```bash
 yarn add react-wave-progress-ball-svg
 
@@ -42,7 +44,7 @@ return <WaveBall value={value} />;
 
 #### 快速生成 Setting Generator
 
-只需要在[波浪进度球Demo页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)中配置好参数，在“导出设置”选项卡点击复制按钮即可。
+只需要在[波浪进度球 Demo 页面](https://heuluck.github.io/Wave-Progress-Ball-Demo/)中配置好参数，在“导出设置”选项卡点击复制按钮即可。
 
 #### 示例 Example
 
@@ -87,7 +89,10 @@ export function ExampleBall() {
 
 | 参数                | 说明                           | 类型                            | 默认值                                                           | 必填  |
 | ------------------- | ------------------------------ | ------------------------------- | ---------------------------------------------------------------- | ----- |
-| value               | 进度                           | number                          | "-"                                                              | true  |
+| value               | 进度百分比                           | number                          | -                                                                | true  |
+| style               | 样式                           | CSSProperties                   | -                                                                | false |
+| className           | 类名                           | string                          | -                                                                | false |
+| adaptive            | 是否自适应大小                 | boolean                         | false                                                            | false |
 | size                | 球的大小                       | number                          | 350                                                              | false |
 | circleColor         | 圆环的颜色                     | string                          | "#bdc3c7"                                                        | false |
 | circleLineWidth     | 圆环线条的宽度                 | number                          | 1                                                                | false |
