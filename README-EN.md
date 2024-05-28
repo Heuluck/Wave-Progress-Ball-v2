@@ -46,7 +46,7 @@ return <WaveBall value={value} />;
 
 #### Setting Generator
 
-Simply copy the settings from the [Demo Page (Chinese)](https://heuluck.github.io/Wave-Progress-Ball-Demo/), and copy the settings from "导出设置".
+Simply copy the settings from the [Demo Page](https://heuluck.github.io/Wave-Progress-Ball-Demo/), and copy the settings from "Output".
 
 #### Example
 
@@ -100,8 +100,8 @@ export function ExampleBall() {
 | className           | className of the `svg` tag                           | string                          | -                                                                | false |
 | adaptive            | Whether to adapt to size                             | boolean                         | false                                                            | false |
 | size                | Size of the ball                                     | number                          | 350                                                              | false |
-| circleColor         | Color of the circle ring                             | string                          | "#bdc3c7"                                                        | false |
-| circleLineWidth     | Width of the circle ring line                        | number                          | 1                                                                | false |
+| circleColor         | Color of the circle outline                             | string                          | "#bdc3c7"                                                        | false |
+| circleLineWidth     | Width of the circle outline                       | number                          | 1                                                                | false |
 | waveHeight          | Height of the wave                                   | number                          | 30                                                               | false |
 | isWaveGradient      | Whether to enable foreground wave gradient effect    | boolean                         | true                                                             | false |
 | isWaveBgGradient    | Whether to enable background wave gradient effect    | boolean                         | true                                                             | false |
