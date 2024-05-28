@@ -46,7 +46,7 @@ return <WaveBall value={value} />;
 
 #### Setting Generator
 
-Simply copy the settings from the [Demo Page (Chinese)](https://heuluck.github.io/Wave-Progress-Ball-Demo/), and copy the settings from "导出设置".
+Simply open the [Demo Page (Chinese)](https://heuluck.github.io/Wave-Progress-Ball-Demo/), and copy the settings from "导出设置".
 
 #### Example
 
