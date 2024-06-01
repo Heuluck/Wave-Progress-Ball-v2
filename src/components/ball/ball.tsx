@@ -7,6 +7,7 @@ export default function WaveBall(props: BallProps) {
         style,
         className,
         adaptive = defaultSetting.adaptive,
+        bgColor = defaultSetting.bgColor,
         size = defaultSetting.size,
         circleColor = defaultSetting.circleColor,
         circleLineWidth = defaultSetting.circleLineWidth,
@@ -36,14 +37,7 @@ export default function WaveBall(props: BallProps) {
                 height={adaptive ? "100%" : size}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 350 350">
-                <circle
-                    cx="175"
-                    cy="175"
-                    r="170"
-                    fill="transparent"
-                    stroke={circleColor}
-                    strokeWidth={circleLineWidth}
-                />
+                <circle cx="175" cy="175" r="170" fill={bgColor} stroke={circleColor} strokeWidth={circleLineWidth} />
                 <g
                     clipPath="url(#cutCircle)"
                     style={{ "--offsetY": `${350 * ((100 - value) / 100)}px` } as CSSProperties}>
@@ -75,15 +69,15 @@ export default function WaveBall(props: BallProps) {
                 <defs>
                     {/* 先画半个曲线，然后自动画出另一半，以此类推，然后画出下面并自动闭合填充 */}
                     <path
-                        d={`M -875 0 Q -787.5 ${waveHeight}, -700 0 T -525 0
-                        T -350 0 T -175 0
-                        T 0 0 T 175 0
-                        T 350 0 T 525 0
-                        T 700 0 T 875 0
-                        T 1050 0 T 1225 0
-                        T 1400 0 T 1575 0
-                        T 1750 0 T 1925 0
-                        L 1750 350 L -875 350 Z`}
+                        d={`M -1050 0 Q -962.5 ${waveHeight}, -875 0 T -700 0
+                        T -525 0 T -350 0
+                        T -175 0 T 0 0
+                        T 175 0 T 350 0
+                        T 525 0 T 700 0
+                        T 875 0 T 1050 0
+                        T 1225 0 T 1400 0
+                        T 1575 0 T 1750 0
+                        L 1750 350 L -1050 350 Z`}
                         className={styleModule.waveDef}
                         id="waveDef"
                     />
@@ -120,6 +114,7 @@ export default function WaveBall(props: BallProps) {
 
 const defaultSetting: BallSettingDefined = {
     adaptive: false,
+    bgColor: "transparent",
     size: 350,
     circleColor: "#bdc3c7",
     circleLineWidth: 1,
@@ -152,6 +147,8 @@ export interface BallProps extends BallSetting {
 export interface BallSetting {
     /** 自适应大小 */
     adaptive?: boolean;
+    /**背景颜色 */
+    bgColor?: "transparent" | string;
     /** 圆环的半径 */
     size?: number;
     /** 圆环的颜色 */
@@ -203,6 +200,8 @@ export interface BallSetting {
 export interface BallSettingDefined {
     /** 自适应大小 */
     adaptive: boolean;
+    /**背景颜色 */
+    bgColor: "transparent" | string;
     /** 圆环的半径 */
     size: number;
     /** 圆环的颜色 */

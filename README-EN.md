@@ -1,14 +1,15 @@
 # Wave Progress Ball for React
+
 <div align="center">
 
 ![NPM Version](https://img.shields.io/npm/v/react-wave-progress-ball-svg?style=flat-square) ![NPM Downloads](https://img.shields.io/npm/dm/react-wave-progress-ball-svg?style=flat-square) ![NPM Type Definitions](https://img.shields.io/npm/types/react-wave-progress-ball-svg?style=flat-square)
- ![NPM License](https://img.shields.io/npm/l/react-wave-progress-ball-svg?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-wave-progress-ball-svg?style=flat-square) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+![NPM License](https://img.shields.io/npm/l/react-wave-progress-ball-svg?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-wave-progress-ball-svg?style=flat-square) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 [中文](./README.md) · English
 
 </div>
 
-This is a React component that uses `<svg>` to implement a wave progress ball. The progress ball can be customized in terms of color, size, progress, gradient, speed, etc. Custom content is detailed in [Customization](#Customization).
+This is a React component that uses `<svg>` to create a wave progress ball. The progress ball can be customized in terms of color, size, progress, gradient, speed, and other 23 kinds of properties. Custom content is detailed in [Customization](#Customization).
 
 ## Preview
 
@@ -93,29 +94,32 @@ export function ExampleBall() {
 
 #### Props
 
-| Property               | Description                                                 | Type                            | Default Value                                                           | is required  |
-| ------------------- | ---------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------- | ----- |
-| value               | To set the completion percentage                     | number                          | -                                                                | true  |
-| style               | style of the `svg` tag                               | CSSProperties                   | -                                                                | false |
-| className           | className of the `svg` tag                           | string                          | -                                                                | false |
-| adaptive            | Whether to adapt to size                             | boolean                         | false                                                            | false |
-| size                | Size of the ball                                     | number                          | 350                                                              | false |
-| circleColor         | Color of the circle outline                             | string                          | "#bdc3c7"                                                        | false |
-| circleLineWidth     | Width of the circle outline                       | number                          | 1                                                                | false |
-| waveHeight          | Height of the wave                                   | number                          | 30                                                               | false |
-| isWaveGradient      | Whether to enable foreground wave gradient effect    | boolean                         | true                                                             | false |
-| isWaveBgGradient    | Whether to enable background wave gradient effect    | boolean                         | true                                                             | false |
-| waveColor           | Color of the foreground wave                         | string                          | "#43CF73"                                                        | false |
-| waveBgColor         | Color of the background wave                         | string                          | "rgba(130,221,95,0.5)"                                           | false |
-| waveGradientColor   | Start and end colors of the foreground wave gradient | { start: string; end: string; } | {start: "#43CF73",end: "#BCEC4F",}                               | false |
-| waveBgGradientColor | Start and end colors of the background wave gradient | { start: string; end: string; } | {start: "rgba(130, 221, 95,0.5)",end: "rgba(130, 221, 97,0.5)",} | false |
-| waveSpeed           | Speed of the foreground wave movement                | number                          | 3                                                                | false |
-| waveBgSpeed         | Speed of the background wave movement                | number                          | 3                                                                | false |
-| waveOffsetY         | Vertical offset of the foreground wave               | number                          | 0                                                                | false |
-| waveBgOffsetY       | Vertical offset of the background wave               | number                          | 0                                                                | false |
-| waveBgOffsetX       | Horizontal offset of the background wave             | number                          | 1                                                                | false |
-| showWaveBg          | Whether to show the background wave                  | boolean                         | true                                                             | false |
-| reverseWave         | Whether to reverse the wave                          | boolean                         | false                                                            | false |
-| reverseWaveBg       | Whether to reverse the background wave               | boolean                         | false                                                            | false |
+| Property            | Description                                          | Type                              | Default Value                                                    | is required |
+| ------------------- | ---------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------- | ----------- |
+| value               | To set the completion percentage                     | `number`                          | -                                                                | true        |
+| style               | style of the `svg` tag                               | `CSSProperties`                   | -                                                                | false       |
+| className           | className of the `svg` tag                           | `string`                          | -                                                                | false       |
+| adaptive            | Whether to adapt to size                             | `boolean`                         | false                                                            | false       |
+| bgColor             | Background color                                     | `transparent\|string`             | "transparent"                                                    | false       |
+| size                | Size of the ball                                     | `number`                          | 350                                                              | false       |
+| circleColor         | Color of the circle outline                          | `string`                          | "#bdc3c7"                                                        | false       |
+| circleLineWidth     | Width of the circle outline                          | `number`                          | 1                                                                | false       |
+| waveHeight          | Height of the wave                                   | `number`                          | 30                                                               | false       |
+| isWaveGradient      | Whether to enable foreground wave gradient effect    | `boolean`                         | true                                                             | false       |
+| isWaveBgGradient    | Whether to enable background wave gradient effect    | `boolean`                         | true                                                             | false       |
+| waveColor           | Color of the foreground wave                         | `string`                          | "#43CF73"                                                        | false       |
+| waveBgColor         | Color of the background wave                         | `string`                          | "rgba(130,221,95,0.5)"                                           | false       |
+| waveGradientColor   | Start and end colors of the foreground wave gradient | `{ start: string; end: string; }` | {start: "#43CF73",end: "#BCEC4F",}                               | false       |
+| waveBgGradientColor | Start and end colors of the background wave gradient | `{ start: string; end: string; }` | {start: "rgba(130, 221, 95,0.5)",end: "rgba(130, 221, 97,0.5)",} | false       |
+| waveSpeed           | Speed of the foreground wave movement                | `number`                          | 3                                                                | false       |
+| waveBgSpeed         | Speed of the background wave movement                | `number`                          | 3                                                                | false       |
+| waveOffsetY         | Vertical offset of the foreground wave               | `number`                          | 0                                                                | false       |
+| waveBgOffsetY       | Vertical offset of the background wave               | `number`                          | 0                                                                | false       |
+| waveBgOffsetX       | Horizontal offset of the background wave             | `number`                          | 1                                                                | false       |
+| showWaveBg          | Whether to show the background wave                  | `boolean`                         | true                                                             | false       |
+| reverseWave         | Whether to reverse the wave                          | `boolean`                         | false                                                            | false       |
+| reverseWaveBg       | Whether to reverse the background wave               | `boolean`                         | false                                                            | false       |
+
 ## Changelog
+
 [Changelog (Chinese)](./CHANGELOG.md)
