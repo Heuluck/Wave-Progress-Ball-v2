@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![NPM Version](https://img.shields.io/npm/v/react-wave-progress-ball-svg?style=flat-square) ![NPM Downloads](https://img.shields.io/npm/dm/react-wave-progress-ball-svg?style=flat-square) ![NPM Type Definitions](https://img.shields.io/npm/types/react-wave-progress-ball-svg?style=flat-square)
+![NPM Version](https://img.shields.io/npm/v/react-wave-progress-ball-svg?style=flat-square) ![NPM Downloads](https://img.shields.io/npm/d18m/react-wave-progress-ball-svg?style=flat-square) ![NPM Type Definitions](https://img.shields.io/npm/types/react-wave-progress-ball-svg?style=flat-square)
 ![NPM License](https://img.shields.io/npm/l/react-wave-progress-ball-svg?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-wave-progress-ball-svg?style=flat-square) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 中文 · [English](./README-EN.md)
